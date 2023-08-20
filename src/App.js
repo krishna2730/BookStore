@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/styles';
 import { theme } from './utils/theme';
 import './assets/css/style.css';
 import Footer from './components/footer/index';

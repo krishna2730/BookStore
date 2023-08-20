@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import flagImage from '../../assets/images/flag-dropdown.png';
 import { colors } from '../../constant/constant';
 
