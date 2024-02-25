@@ -1,0 +1,50 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Triveous eCommerce",
+    "description" : "This is an example of using OAuth2 Access Code Flow in a specification to describe security to your API.",
+    "contact" : {
+      "name" : "Krishna Viramgama",
+      "email" : "krishnaviramgama2002@gmail.com"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/KrishnaViramgama/eCommerce/1.0.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "http://localhost:3000/api/v1/triveous",
+    "description" : "Triveous eCommerce"
+  } ],
+  "security" : [ {
+    "accessCode" : [ "read", "write" ]
+  } ],
+  "components" : {
+    "schemas" : {
+      "Schema" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "accessCode" : {
+        "type" : "oauth2",
+        "flows" : {
+          "authorizationCode" : {
+            "authorizationUrl" : "http://example.com/oauth/auth",
+            "tokenUrl" : "http://example.com/oauth/token",
+            "scopes" : {
+              "write" : "allows modifying resources",
+              "read" : "allows reading resources"
+            }
+          }
+        }
+      }
+    }
+  }
+}
